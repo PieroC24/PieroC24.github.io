@@ -1,0 +1,103 @@
+/* reset css */
+
+* {
+    min-width: 0;
+    font: inherit;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  img,
+  video,
+  svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100dvh;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+
+  /* start here */
+
+
+
+  body {
+    background-color: white;
+
+    & main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & hi {
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        & .options {
+            font-size: 1.5rem;
+            font-weight: 600;
+            
+            & button {
+                padding: .5rem 1.5rem;
+                border: 1px solid rgba(0,0,0,.2);
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+            }
+
+            & button#hover {
+                box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+            }
+
+            & button#yes {
+                background-color: rgb(68, 172, 68);
+                margin-right: 2rem;
+            }
+
+            & button#no {
+                background-color: #ff6347;
+            }
+        }
+    }
+  }
+  
+  #message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(179, 127, 221);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    & hi {
+        font-size: 5rem;
+        text-align: center;
+        font-weight: 600;
+        animation: heart 1s linear infinite;
+    }
+  }
+
